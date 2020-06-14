@@ -122,7 +122,6 @@ export default function Navbar() {
         Billing
       </MenuItem>
       <MenuItem
-        style={{ backgroundColor: "#24252a", color: "rgb(167, 42, 57)" }}
         onClick={handleMenuClose}
       >
         Logout
@@ -144,7 +143,7 @@ export default function Navbar() {
       onClose={handleMobileMenuClose}
     >
       {NavbarItems.map((navbarItem) => (
-        <MenuItem style={{ backgroundColor: "#24252a" }} key={navbarItem.name}>
+        <MenuItem key={navbarItem.name}>
           <Link to={navbarItem.href} className={classes.navLinks}>
             {navbarItem.name}
           </Link>
@@ -159,10 +158,10 @@ export default function Navbar() {
       
         <Toolbar style={{background: "#000000"}}>
           <div className={classes.toolbarItemsCenter}><b>+91-9988776655</b></div>
-          <div className={classes.toolbarItemsCenter}><b>WORLDWIDE SHIPPING AVAILABLE</b></div>
+          <div className={classes.toolbarItemsCenter}><b>Worldwide Shipping Available</b></div>
         </Toolbar>
 
-        <Toolbar>
+        <Toolbar style={{background: "#fffafa"}}>
           <Link to="/" className={classes.navbarTitle}>
             <img src={require("../../assets/plush_logo.webp")} alt="Plush" />
           </Link>

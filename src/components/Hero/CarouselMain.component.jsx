@@ -21,7 +21,14 @@ const CarouselMain = () => {
         animation="openAnimation"
       >
         <div data-src={require("../../assets/carousel/balloon1.webp")} />
-        <div data-src={require("../../assets/carousel/balloon2.webp")} />
+        <div>
+          <video
+            src={require("../../assets/carousel/carousel.MOV")}
+            autoPlay={true}
+            width="100%"
+            height="100%"
+          />
+        </div>
         <div data-src={require("../../assets/carousel/rose1.jpg")} />
         <div data-src={require("../../assets/carousel/rose2.webp")} />
       </AutoplaySlider>

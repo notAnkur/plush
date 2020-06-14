@@ -5,22 +5,24 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Plush Floral Company"
-    />
+    <meta name="description" content="Plush Floral Company" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Lobster:wght@400&display=swap"
       rel="stylesheet"
-    />
-    <link
+    /> -->
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Bellota&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne:wght@400&display=swap"
       rel="stylesheet"
     />
 
@@ -30,7 +32,7 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
 
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -45,30 +47,18 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="load-wrapper">
-      <div
-        id="loadContainer"
-        style="
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 56px;
-          height: 59px;
-          margin-left: -28px;
-          margin-top: -29px;
-        "
-      >
-        <svg
-          id="treeIcon"
-          baseProfile="basic"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 56 59"
-        >
-          <path id="tree1" />
-          <path id="tree2" />
-        </svg>
+
+    <div id="load-wrapper">
+      <div id="circle_container">
+        <div id="stars"></div>
+        <div id="load_wrapper">
+          <div id="sun"></div>
+          <div id="moon"></div>
+        </div>
       </div>
+      <h1 id="loading_text">Loading</h1>
     </div>
+
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -81,74 +71,44 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script>
-      var pathStart =
-        "M 28 2 L 17 16 L 23 16 L 9 34 L 17 34 L 3 52 L 19 52 L 19 57 ";
-      var ptsDynamic = [
-        [[19, 37], 57],
-        [[19, 37], 52],
-        [[3, 53], 52],
-        [[17, 39], 34],
-        [[9, 47], 34],
-        [[23, 33], 16],
-        [[17, 39], 16],
-      ];
+      function getRandom(size) {
+        return Math.floor(Math.random() * size);
+      }
 
-      var colors = ["#636567", "#fdc76d"];
-      var tweenPos = { path1: 0, path2: 0, currCol: 0, dur: 0.75 };
+      //Creating the layers for the stars
+      for (i = 2; i < 12; i++) {
+        $("#stars").append(
+          '<div class="star_layer" style="transform: translateZ(' +
+            i +
+            "px) scale(" +
+            (15 - i) / 15 +
+            ');"></div>'
+        );
+      }
 
-      var svgTreeContainer = document.getElementById("treeIcon"),
-        path1 = document.getElementById("tree1"),
-        path2 = document.getElementById("tree2");
+      //Creating the stars
+      for (i = 0; i < 70; i++) {
+        $(".star_layer").eq(getRandom(10)).append('<div class="star"></div>');
+      }
 
-      function bringIn() {
-        path1.setAttribute("fill", colors[0]);
-        TweenLite.to(tweenPos, tweenPos.dur, {
-          path1: 1,
-          ease: Power2.easeOut,
-          onComplete: nextColor,
-          onUpdate: function () {
-            updateTree(path1, tweenPos.path1);
-          },
-          delay: 0.5,
+      updateStars();
+
+      //Change stars every cycle
+      setInterval(updateStars, 4000);
+
+      //Randomising stars. Position and opacity is changed every cycle.
+      function updateStars() {
+        $(".star").each(function () {
+          $(this).css({
+            top: getRandom(200) + "px",
+            left: getRandom(200) + "px",
+            opacity: (20 + getRandom(50)) / 100,
+          });
         });
       }
-
-      function nextColor() {
-        tweenPos.currCol++;
-        path1.setAttribute("fill", colors[(tweenPos.currCol + 1) % 2]);
-        path2.setAttribute("fill", colors[tweenPos.currCol % 2]);
-        tweenPos.path2 = 0;
-        updateTree(path2, 0);
-        TweenLite.to(tweenPos, tweenPos.dur, {
-          path2: 1,
-          ease: Linear.easeInOut,
-          onComplete: nextColor,
-          onUpdate: function () {
-            updateTree(path2, tweenPos.path2);
-          },
-        });
-      }
-
-      function updateTree(pathObj, perc) {
-        var path = pathStart;
-        for (var i = 0; i < ptsDynamic.length; i++) {
-          path +=
-            "L " +
-            (ptsDynamic[i][0][0] +
-              (ptsDynamic[i][0][1] - ptsDynamic[i][0][0]) * perc) +
-            " " +
-            ptsDynamic[i][1];
-        }
-        path += " z";
-        pathObj.setAttribute("d", path);
-      }
-
-      // buildTree();
-      updateTree(path1, 1);
-      bringIn();
 
       $(window).on("load", function () {
-        $("#loadContainer").fadeOut("slow");
+        $("#load-wrapper").fadeOut("slow");
       });
     </script>
   </body>

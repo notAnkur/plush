@@ -49,7 +49,7 @@ export default function About() {
               className={classes.aboutTitle}
               gutterBottom
             >
-              INDIA'S FRESH FLOWERS
+              India's Fresh Flowers
             </Typography>
             <Typography
               variant="body1"

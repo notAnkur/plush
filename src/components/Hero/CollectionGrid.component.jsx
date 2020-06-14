@@ -240,10 +240,10 @@ export default function CollectionGrid() {
         A collection of beautiful products selected by our staff.
       </Typography>
       <Grid container spacing={1}>
-        <Grid container item xs={12} spacing={4}>
+        <Grid container item xs={12} spacing={2}>
           <FormRow />
         </Grid>
-        <Grid container item xs={12} spacing={4}>
+        <Grid container item xs={12} spacing={2}>
           <FormRow2 />
         </Grid>
       </Grid>
