@@ -30,7 +30,7 @@ const App = () => {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path="/" component={Hero} />
+        <Route path="/" component={Hero} />
       </Switch>
       <Footer />
       <Fab className={classes.fab} aria-label="add">
