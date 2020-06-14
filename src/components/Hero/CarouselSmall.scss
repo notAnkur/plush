@@ -3,27 +3,29 @@
 
 .SecondExample
 {
-    width: auto;
+    width: 90%;
+    margin: auto;
 
     .Project
     {
         position: relative;
         height: 500px;
         overflow: hidden;
-        padding: 20px;
+        padding: 50px;
+        // background: linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75) 100%);
 
-        *
-        {
-            color: white;
-        }
+        // *
+        // {
+        //     color: rgba(255, 255, 255, 0);
+        // }
 
         .CheckButton
         {
             margin-top: 40px;
-            color: white;
+            color: rgb(0, 0, 0);
 
             font-size: $header-font-size;
-            border: 3px solid white;
+            border: 3px solid rgb(61, 61, 61);
             text-transform: capitalize;
 
             // transition: 200ms;

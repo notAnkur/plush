@@ -6,8 +6,6 @@ import {
   Container,
   Typography,
   Grid,
-  Button,
-  Toolbar,
 } from "@material-ui/core";
 
 function Copyright() {

@@ -2,14 +2,8 @@ import React from "react";
 import Carousel from "react-material-ui-carousel";
 import autoBind from "auto-bind";
 import {
-  FormLabel,
-  FormControlLabel,
-  Checkbox,
-  Radio,
-  RadioGroup,
   Paper,
   Button,
-  Slider,
   Typography,
 } from "@material-ui/core";
 
@@ -20,12 +14,13 @@ function Project(props) {
     <Paper
       className="Project"
       style={{
-        backgroundColor: props.item.color,
+        backgroundImage: `url(${props.item.image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
       elevation={10}
     >
-      <h2>{props.item.name}</h2>
-      <p>{props.item.description}</p>
+      <Typography variant="h4"><b>{props.item.name}</b></Typography>
 
       <Button className="CheckButton">Check it out!</Button>
     </Paper>
@@ -34,25 +29,29 @@ function Project(props) {
 
 const items = [
   {
-    name: "Lear Music Reader",
+    name: "Collection 1",
     description: "A PDF Reader specially designed for musicians.",
     color: "#64ACC8",
+    image: "https://images.unsplash.com/photo-1586951900606-1a0a612549ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
   },
   {
-    name: "Hash Code 2019",
+    name: "Collection 2",
     description:
       "My Solution on the 2019 Hash Code by Google Slideshow problem.",
     color: "#7D85B1",
+    image: "https://images.unsplash.com/photo-1452827073306-6e6e661baf57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
   },
   {
-    name: "Terrio",
+    name: "Collection 3",
     description: "A exciting mobile game game made in the Unity Engine.",
     color: "#CE7E78",
+    image: "https://images.unsplash.com/photo-1533616688419-b7a585564566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
   },
   {
-    name: "React Carousel",
+    name: "Collection 4",
     description: "A Generic carousel UI component for React using material ui.",
     color: "#C9A27E",
+    image: "https://images.unsplash.com/photo-1571559945800-21fd60231e4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
   },
 ];
 
@@ -64,7 +63,7 @@ export default class CarouselSmall extends React.Component {
       autoPlay: true,
       timer: 500,
       animation: "fade",
-      indicators: true,
+      indicators: false,
       timeout: 500,
       navButtonsAlwaysVisible: true,
     };
@@ -89,85 +88,6 @@ export default class CarouselSmall extends React.Component {
             return <Project item={item} key={index} />;
           })}
         </Carousel>
-
-        <FormLabel component="legend">Options</FormLabel>
-        <FormControlLabel
-          control={
-            <Checkbox
-              onChange={this.toggleAutoPlay}
-              checked={this.state.autoPlay}
-              value="autoplay"
-              color="primary"
-            />
-          }
-          label="Auto-play"
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              onChange={this.toggleIndicators}
-              checked={this.state.indicators}
-              value="indicators"
-              color="primary"
-            />
-          }
-          label="Indicators"
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              onChange={this.toggleNavButtonsAlwaysVisible}
-              checked={this.state.navButtonsAlwaysVisible}
-              value="indicators"
-              color="primary"
-            />
-          }
-          label="NavButtonsAlwaysVisible"
-        />
-
-        <FormControlLabel
-          control={
-            <RadioGroup
-              name="animation"
-              value={this.state.animation}
-              onChange={this.changeAnimation}
-              row
-              style={{ marginLeft: "10px" }}
-            >
-              <FormControlLabel
-                value="fade"
-                control={<Radio color="primary" />}
-                label="Fade"
-              />
-              <FormControlLabel
-                value="slide"
-                control={<Radio color="primary" />}
-                label="Slide"
-              />
-            </RadioGroup>
-          }
-        />
-
-        <FormControlLabel
-          control={
-            <div style={{ width: 300 }}>
-              <Typography id="discrete-slider" gutterBottom>
-                Animation Duration (Timeout) in ms
-              </Typography>
-              <Slider
-                defaultValue={500}
-                getAriaValueText={() => `${this.state.timeout}ms`}
-                aria-labelledby="discrete-slider"
-                valueLabelDisplay="auto"
-                step={100}
-                marks
-                min={100}
-                max={2000}
-                onChange={this.changeTimeout}
-              />
-            </div>
-          }
-        />
       </div>
     );
   }
