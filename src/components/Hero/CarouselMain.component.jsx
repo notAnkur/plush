@@ -23,10 +23,12 @@ const CarouselMain = () => {
         <div data-src={require("../../assets/carousel/balloon1.webp")} />
         <div>
           <video
-            src={require("../../assets/carousel/carousel.MOV")}
+            src={require("../../assets/carousel/carousel.webm")}
             autoPlay={true}
+            loop={true}
             width="100%"
             height="100%"
+            muted={true}
           />
         </div>
         <div data-src={require("../../assets/carousel/rose1.jpg")} />
@@ -35,6 +37,5 @@ const CarouselMain = () => {
     </div>
   );
 };
-// react-awesome-slider/src/styled/fold-out-animation.scss
 
 export default CarouselMain;
