@@ -6,8 +6,7 @@ import About from "./About.component";
 import SocialGrid from "../SocialGrid/SocialGrid.component";
 
 import {
-  makeStyles,
-  Paper
+  makeStyles
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
