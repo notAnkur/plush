@@ -79,8 +79,10 @@ const useStyles = makeStyles((theme) => ({
     background: "#fffafa",
   },
   socialTitle: {
-    fontSize: 40,
+    fontSize: 42,
     color: theme.palette.primary.main,
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
   },
   socialButton: {
     fontSize: 32,

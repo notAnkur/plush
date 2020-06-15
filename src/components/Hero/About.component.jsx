@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutSub: {
     marginBottom: theme.spacing(6),
-    fontSize: 18,
+    fontSize: 20,
   },
 }));
 
