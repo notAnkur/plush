@@ -6,6 +6,8 @@ import "react-awesome-slider/dist/custom-animations/open-animation.css";
 import "./CarouselMain.scss";
 import AwesomeSliderStyles from "react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss";
 
+import { Typography, Button, Paper } from "@material-ui/core";
+
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const CarouselMain = () => {
@@ -20,27 +22,32 @@ const CarouselMain = () => {
         bullets={false}
         animation="openAnimation"
       >
-        <div data-src={require("../../assets/carousel/balloon1.webp")} />
-        {/* <div>
-          <video
-            src={require("../../assets/carousel/carousel.webm")}
-            autoPlay={true}
-            loop={true}
-            width="100%"
-            height="100%"
-            muted={true}
-          />
-        </div> */}
-        <div>
-          <video
-            src="https://media.istockphoto.com/videos/open-box-balloon-levitation-3d-rendering-motion-loopable-video-id1091614394"
-            autoPlay={true}
-            loop={true}
-            className="video-player"
-          />
+        {/* <div data-src={require("../../assets/carousel/balloon1.webp")}>
+        <p>I want to see what you got.</p>
         </div>
+        <div data-src="https://cdn.shopify.com/s/files/1/0004/2303/4931/products/IMG_9958-2_1024x1024@2x.jpg?v=1580797654" />
         <div data-src={require("../../assets/carousel/rose1.jpg")} />
-        <div data-src={require("../../assets/carousel/rose2.webp")} />
+        <div data-src={require("../../assets/carousel/rose2.webp")} /> */}
+        <div className="mainCarousel">
+          <Paper
+            className="Project"
+            style={{
+              backgroundImage:
+                "url(https://cdn.shopify.com/s/files/1/0004/2303/4931/products/IMG_9958-2_1024x1024@2x.jpg?v=1580797654)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            elevation={10}
+          >
+            <div>
+              <Typography style={{fontSize: "5vw"}} color="secondary" align="center" gutterBottom>
+                <b>Plush Floral Company</b>
+              </Typography>
+
+              <Button className="CheckButton">Check it out!</Button>
+            </div>
+          </Paper>
+        </div>
       </AutoplaySlider>
     </div>
   );

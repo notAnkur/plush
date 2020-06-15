@@ -5,7 +5,10 @@ import "./TestimonialCard.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingBottom: theme.spacing(4)
+    paddingBottom: theme.spacing(4),
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
     fontSize: 18,

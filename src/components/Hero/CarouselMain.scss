@@ -1,6 +1,39 @@
-.aws-btn {
+@import "global";
 
-  --slider-height-percentage: 50%;
+.mainCarousel {
+  .Project {
+    // position: relative;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .CheckButton {
+      color: #ff69b4;
+      background-color: rgba($color: #ffffff, $alpha: 0.6);
+      display: inline-block;
+      width: 100%;
+      font-size: 4vw;
+      // padding: 2vw;
+      border: 3px solid #ff69b4;
+      text-transform: capitalize;
+
+      // transition: 200ms;
+    }
+  }
+}
+
+.aws-btn {
+  --slider-height-percentage: 40%;
   --slider-transition-duration: 575ms;
   --organic-arrow-thickness: 10px;
   --organic-arrow-border-radius: 4px;
@@ -14,16 +47,16 @@
   --control-bullet-active-color: #36454f;
   --loader-bar-color: #36454f;
   --loader-bar-height: 10px;
-  }
+}
 
-  .video-player {
-    position: absolute; 
-    right: 0; 
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    width: auto; 
-    height: auto;
-    background-size: cover;
-    overflow: hidden;
-  }
+.video-player {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  background-size: cover;
+  overflow: hidden;
+}

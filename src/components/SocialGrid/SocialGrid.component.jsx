@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#fffafa",
   },
   socialTitle: {
-    fontSize: 48,
+    fontSize: 40,
     color: theme.palette.primary.main,
   },
   socialButton: {
@@ -118,7 +118,6 @@ const SocialGrid = () => {
         <Typography
           align="center"
           className={classes.socialButton}
-          gutterBottom
         >
           Follow us on Instagram
         </Typography>

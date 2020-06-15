@@ -156,14 +156,14 @@ export default function Navbar() {
     <div>
       <AppBar position="static" elevation={20} color="transparent">
       
-        <Toolbar style={{background: "#000000"}}>
+        <Toolbar style={{background: "#000000"}} variant="dense">
           <div className={classes.toolbarItemsCenter}><b>+91-9988776655</b></div>
           <div className={classes.toolbarItemsCenter}><b>Worldwide Shipping Available</b></div>
         </Toolbar>
 
         <Toolbar style={{background: "#fffafa"}}>
           <Link to="/" className={classes.navbarTitle}>
-            <img src={require("../../assets/plush_logo.webp")} alt="Plush" />
+            <img style={{width: "106.66px", height: "80px"}} src={require("../../assets/plush_logo.webp")} alt="Plush" />
           </Link>
           <div className={classes.sectionDesktop}>
             <div className={classes.toolbarItemsLeft}>
