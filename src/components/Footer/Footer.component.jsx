@@ -11,9 +11,9 @@ import {
 function Copyright() {
   return (
     <Typography
-      variant="caption"
+      variant="body1"
       align="left"
-      style={{ color: "rgba(220,202,152,0.6)" }}
+      style={{ color: "rgba(220,202,152,0.6)", }}
     >
       {"Copyright © "}
       {new Date().getFullYear()}
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 48,
   },
   footer: {
-    background: theme.palette.primary.main,
+    background: "#000",
     width: "100%",
     color: "#fff",
     borderTop: `1px solid ${theme.palette.divider}`,
@@ -51,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
     color: "rgba(220, 202, 152, 0.8)",
     fontSize: 14,
     textDecoration: "none",
+    fontWeight: "bold",
     "&:hover": {
       color: "rgba(220, 202, 152, 1)",
     },
