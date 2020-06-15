@@ -32,8 +32,88 @@ const CarouselMain = () => {
           <Paper
             className="Project"
             style={{
+              backgroundImage: `url(${require("../../assets/carousel/rose1.jpg")})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            elevation={10}
+          >
+            <div>
+              <Typography style={{fontSize: "5vw"}} color="secondary" align="center" gutterBottom>
+                <b>Plush Floral Company</b>
+              </Typography>
+
+              <Button className="CheckButton">Check it out!</Button>
+            </div>
+          </Paper>
+        </div>
+
+        <div className="mainCarousel">
+          <Paper
+            className="Project"
+            style={{
+              backgroundImage: `url(${require("../../assets/carousel/balloon1.webp")})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            elevation={10}
+          >
+            <div>
+              <Typography style={{fontSize: "5vw"}} color="secondary" align="center" gutterBottom>
+                <b>Plush Floral Company</b>
+              </Typography>
+
+              <Button className="CheckButton">Check it out!</Button>
+            </div>
+          </Paper>
+        </div>
+
+        <div className="mainCarousel">
+          <Paper
+            className="Project"
+            style={{
+              backgroundImage: `url(${require("../../assets/carousel/rose2.webp")})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            elevation={10}
+          >
+            <div>
+              <Typography style={{fontSize: "5vw"}} color="secondary" align="center" gutterBottom>
+                <b>Plush Floral Company</b>
+              </Typography>
+
+              <Button className="CheckButton">Check it out!</Button>
+            </div>
+          </Paper>
+        </div>
+
+        <div className="mainCarousel">
+          <Paper
+            className="Project"
+            style={{
               backgroundImage:
                 "url(https://cdn.shopify.com/s/files/1/0004/2303/4931/products/IMG_9958-2_1024x1024@2x.jpg?v=1580797654)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            elevation={10}
+          >
+            <div>
+              <Typography style={{fontSize: "5vw"}} color="secondary" align="center" gutterBottom>
+                <b>Plush Floral Company</b>
+              </Typography>
+
+              <Button className="CheckButton">Check it out!</Button>
+            </div>
+          </Paper>
+        </div>
+
+        <div className="mainCarousel">
+          <Paper
+            className="Project"
+            style={{
+              backgroundImage: `url(${require("../../assets/carousel/flower1.webp")})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
