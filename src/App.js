@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { makeStyles, Fab } from '@material-ui/core';
+import { makeStyles, Fab, Badge } from '@material-ui/core';
 import { BsChatSquareDots } from "react-icons/bs";
 
 import Hero from "./components/Hero/Hero.component";

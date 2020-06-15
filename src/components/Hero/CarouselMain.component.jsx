@@ -21,7 +21,7 @@ const CarouselMain = () => {
         animation="openAnimation"
       >
         <div data-src={require("../../assets/carousel/balloon1.webp")} />
-        <div>
+        {/* <div>
           <video
             src={require("../../assets/carousel/carousel.webm")}
             autoPlay={true}
@@ -29,6 +29,14 @@ const CarouselMain = () => {
             width="100%"
             height="100%"
             muted={true}
+          />
+        </div> */}
+        <div>
+          <video
+            src="https://media.istockphoto.com/videos/open-box-balloon-levitation-3d-rendering-motion-loopable-video-id1091614394"
+            autoPlay={true}
+            loop={true}
+            className="video-player"
           />
         </div>
         <div data-src={require("../../assets/carousel/rose1.jpg")} />
