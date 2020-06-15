@@ -4,6 +4,7 @@ import FloralCollection from "./FloralCollection.component";
 import CollectionGrid from "./CollectionGrid.component";
 import About from "./About.component";
 import SocialGrid from "../SocialGrid/SocialGrid.component";
+import Testimonial from "../Testimonial/Testimonial.component";
 
 import {
   makeStyles
@@ -25,7 +26,8 @@ const Hero = () => {
       <div className={classes.floralCollection}>
         <FloralCollection />
       </div>
-      <SocialGrid style={{width: "auto", height: "auto"}} />
+      <SocialGrid />
+      < Testimonial />
     </>
   )
 }
