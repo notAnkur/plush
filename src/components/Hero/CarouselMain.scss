@@ -18,13 +18,13 @@
     justify-content: center;
 
     .CheckButton {
-      color: #ff69b4;
-      background-color: rgba($color: #ffffff, $alpha: 0.6);
+      color: #ffffff;
+      background-color: rgba($color: #eab96a, $alpha: 0.6);
       display: inline-block;
       width: 100%;
-      font-size: 4vw;
+      font-size: 3.25vw;
       // padding: 2vw;
-      border: 3px solid #ff69b4;
+      border: 3px solid #ffffff;
       text-transform: capitalize;
 
       // transition: 200ms;

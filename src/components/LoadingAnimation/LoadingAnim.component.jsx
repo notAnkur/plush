@@ -1,18 +1,14 @@
 import React from "react";
-import "./LoadingAnim.css";
 
 const LoadingAnim = () => {
   
   return (
-    <div>
-      <div id="circle_container">
-        <div id="stars"></div>
-        <div id="load_wrapper">
-          <div id="sun"></div>
-          <div id="moon"></div>
-        </div>
-      </div>
-    </div>
+    <div id="loader" class="loader">
+		<div id="my-svg"></div>
+		<div class="loader-img text-center">
+			<img src="img/story-flowers.png" alt="flowers" />
+		</div>
+	</div>
   );
 };
 

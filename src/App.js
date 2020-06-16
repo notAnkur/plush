@@ -8,6 +8,7 @@ import Hero from "./components/Hero/Hero.component";
 import Navbar from "./components/Navbar/Navbar.component";
 import Footer from "./components/Footer/Footer.component";
 import LoadingAnim from "./components/LoadingAnimation/LoadingAnim.component";
+import Navbar_Custom from "./components/Navbar_Custom.jsx";
 
 const useStyles = makeStyles((theme) => ({
   fab: {
@@ -38,7 +39,7 @@ const App = () => {
         <LoadingAnim />
       ) : (
         <Router>
-          <Navbar />
+          <Navbar_Custom />
           <Switch>
             <Route path="/" component={Hero} />
           </Switch>

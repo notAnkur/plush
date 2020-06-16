@@ -1,7 +1,6 @@
 import React from "react";
 import Gallery from "react-grid-gallery";
 import "./SocialGrid.scss";
-
 import { makeStyles, Paper, Typography } from "@material-ui/core";
 
 const IMAGES = [

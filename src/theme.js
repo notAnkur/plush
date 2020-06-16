@@ -11,7 +11,10 @@ const theme = createMuiTheme({
       main: "#36454f",
     },
     secondary: {
-      main: "#ff69b4",
+      main: "#ffcc47",
+    },
+    tertiary: {
+        main: "#ffffff",
     },
     error: {
       main: red.A400,
@@ -21,7 +24,8 @@ const theme = createMuiTheme({
     },
     text: {
       primary: "#36454f",
-      secondary: "#ff69b4",
+      secondary: "#ffcc47",
+      tertiary: "#ffffff",
     },
   },
 });

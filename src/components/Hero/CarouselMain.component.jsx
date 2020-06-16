@@ -28,11 +28,33 @@ const CarouselMain = () => {
         <div data-src="https://cdn.shopify.com/s/files/1/0004/2303/4931/products/IMG_9958-2_1024x1024@2x.jpg?v=1580797654" />
         <div data-src={require("../../assets/carousel/rose1.jpg")} />
         <div data-src={require("../../assets/carousel/rose2.webp")} /> */}
-        <div className="mainCarousel">
+         <div className="mainCarousel">
           <Paper
             className="Project"
             style={{
-              backgroundImage: `url(${require("../../assets/carousel/rose1.jpg")})`,
+              backgroundImage: `url(${require("../../assets/carousel/rose2.webp")})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            elevation={10}
+          >
+            <div>
+              <Typography style={{fontSize: "5vw"}} color="tertiary" align="center" gutterBottom>
+                <b>Plush Floral Company</b>
+              </Typography>
+
+              <Button className="CheckButton">Check it out!</Button>
+            </div>
+          </Paper>
+        </div>
+        
+        
+         <div className="mainCarousel">
+          <Paper
+            className="Project"
+            style={{
+              backgroundImage:
+                "url(https://cdn.shopify.com/s/files/1/0004/2303/4931/products/IMG_9958-2_1024x1024@2x.jpg?v=1580797654)",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -47,7 +69,27 @@ const CarouselMain = () => {
             </div>
           </Paper>
         </div>
+        
+        <div className="mainCarousel">
+          <Paper
+            className="Project"
+            style={{
+              backgroundImage: `url(${require("../../assets/carousel/rose1.jpg")})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            elevation={10}
+          >
+            <div>
+              <Typography style={{fontSize: "5vw"}} color="tertiary" align="center" gutterBottom>
+                <b>Plush Floral Company</b>
+              </Typography>
 
+              <Button className="CheckButton">Check it out!</Button>
+            </div>
+          </Paper>
+        </div>
+        
         <div className="mainCarousel">
           <Paper
             className="Project"
@@ -67,40 +109,19 @@ const CarouselMain = () => {
             </div>
           </Paper>
         </div>
-
+        
         <div className="mainCarousel">
           <Paper
             className="Project"
             style={{
-              backgroundImage: `url(${require("../../assets/carousel/rose2.webp")})`,
+              backgroundImage: "url(https://cdn.shopify.com/s/files/1/0004/2303/4931/products/Pint1_300x300.jpg?v=1527671056)",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
             elevation={10}
           >
             <div>
-              <Typography style={{fontSize: "5vw"}} color="secondary" align="center" gutterBottom>
-                <b>Plush Floral Company</b>
-              </Typography>
-
-              <Button className="CheckButton">Check it out!</Button>
-            </div>
-          </Paper>
-        </div>
-
-        <div className="mainCarousel">
-          <Paper
-            className="Project"
-            style={{
-              backgroundImage:
-                "url(https://cdn.shopify.com/s/files/1/0004/2303/4931/products/IMG_9958-2_1024x1024@2x.jpg?v=1580797654)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            elevation={10}
-          >
-            <div>
-              <Typography style={{fontSize: "5vw"}} color="secondary" align="center" gutterBottom>
+              <Typography style={{fontSize: "5vw"}} color="tertiary" align="center" gutterBottom>
                 <b>Plush Floral Company</b>
               </Typography>
 

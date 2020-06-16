@@ -222,6 +222,14 @@ export default function CollectionGrid() {
 
   return (
     <div className={classes.root}>
+    
+    <div class="date-section__flowers m-auto">
+				<img src="img/date-flowers.png" alt="flowers" />
+			</div>
+			<div class="date-section__block">
+				<div class="d-inline-block">
+				</div>
+	  
       <Typography
         variant="h4"
         align="center"
@@ -239,6 +247,8 @@ export default function CollectionGrid() {
       >
         A collection of beautiful products selected by our staff.
       </Typography>
+      </div>
+      
       <Grid container spacing={1}>
         <Grid container item xs={12} spacing={2}>
           <FormRow />

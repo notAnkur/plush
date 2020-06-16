@@ -39,7 +39,7 @@ export default function TestimonialCard() {
             alt="sq-sample1"
           />
           <h5>
-            Lizzie Dawson
+            Supriya V
           </h5>
         </div>
       </figure>
