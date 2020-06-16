@@ -223,11 +223,11 @@ export default function CollectionGrid() {
   return (
     <div className={classes.root}>
     
-    <div class="date-section__flowers m-auto">
+    <div className="date-section__flowers m-auto">
 				<img src="img/date-flowers.png" alt="flowers" />
 			</div>
-			<div class="date-section__block">
-				<div class="d-inline-block">
+			<div className="date-section__block">
+				<div className="d-inline-block">
 				</div>
 	  
       <Typography
