@@ -5,10 +5,10 @@ import { makeStyles, Fab } from "@material-ui/core";
 import { BsChatSquareDots } from "react-icons/bs";
 
 import Hero from "./components/Hero/Hero.component";
-import Navbar from "./components/Navbar/Navbar.component";
+// import Navbar from "./components/Navbar/Navbar.component";
 import Footer from "./components/Footer/Footer.component";
 import LoadingAnim from "./components/LoadingAnimation/LoadingAnim.component";
-import Navbar_Custom from "./components/Navbar_Custom.jsx";
+import NavbarCustom from "./components/Navbar_Custom.jsx";
 
 const useStyles = makeStyles((theme) => ({
   fab: {
@@ -24,22 +24,25 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+let isLoadingSync = true;
+
 const App = () => {
   const classes = useStyles();
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     window.addEventListener("load", () => {
       setIsLoading(false);
+      isLoadingSync = false;
     });
   })
 
   return (
     <>
-      {isLoading ? (
+      {isLoading || !isLoadingSync ? (
         <LoadingAnim />
       ) : (
         <Router>
-          <Navbar_Custom />
+          <NavbarCustom />
           <Switch>
             <Route path="/" component={Hero} />
           </Switch>
