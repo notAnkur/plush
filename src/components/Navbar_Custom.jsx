@@ -8,7 +8,7 @@ class NavbarCustom extends React.Component {
                 <div className="d-lg-flex w-100 align-items-start">
                     <a className="navbar-brand text-primary" href="/">
                         <img className="d-none d-lg-block navbar-brand__img" src="img/logo.png" alt="logo"/>
-                        <img className="d-lg-none navbar-brand__img" src="img/logo-small.png" alt="logo"/>
+                        <img className="d-lg-none navbar-brand__img" src="img/logo.png" alt="logo"/>
                     </a>
                     <button type="button" className="d-lg-none navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
                         <span className="sr-only">Toggle navigation</span>
